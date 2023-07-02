@@ -1,11 +1,9 @@
 using IMS.Data.Models.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace social_network.src.Models
 {
-    [Table("comments")]
     public class Comment : Auditable
     {
         public Guid StatusId { get; set; }

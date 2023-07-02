@@ -12,11 +12,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEAE25F6-E425-4F8B-89D6-237126393C59}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E98DED1-ABE6-484F-9857-8D4B471886AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Data.Test", "src\Tests\IMS.Data.Test\IMS.Data.Test.csproj", "{7B2BC98A-9CFB-49F0-8740-3C4BCED8C794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS.Data.Test", "src\Tests\IMS.Data.Test\IMS.Data.Test.csproj", "{7B2BC98A-9CFB-49F0-8740-3C4BCED8C794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

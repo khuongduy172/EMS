@@ -1,8 +1,15 @@
+using IMS.Data;
+using WebAPI.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 {
     // Add services to the container.
 
     builder.Services.AddControllers();
+
+    //DB Context
+    builder.Services.RegisterDataServices(builder.Configuration);
+
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
@@ -10,6 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
+    app.MigrateDatabase();
+
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {

@@ -19,3 +19,9 @@ dotnet new <TEMPLATE>
 ```
 dotnet sln add .\src\IMS.Data\IMS.Data.csproj
 ```
+
+## Add a new migration to specific project
+
+```
+dotnet ef migrations add InitialMigration --project .\src\IMS.Data\ --startup-project .\src\WebAPI\ 
+```
