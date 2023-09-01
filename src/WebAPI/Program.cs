@@ -1,4 +1,5 @@
 using IMS.Data;
+using WebAPI;
 using WebAPI.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
     //DB Context
     builder.Services.RegisterDataServices(builder.Configuration);
+
+    builder.Services.ConfigureMassTransit();
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
