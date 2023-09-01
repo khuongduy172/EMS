@@ -1,4 +1,4 @@
-# Instagram Management System
+# Ecommerce Management System
 
 ## Create solution
 
