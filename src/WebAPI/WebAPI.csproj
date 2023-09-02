@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IMS.Data\EMS.Data.csproj" />
+    <ProjectReference Include="..\MessagingCore\MessagingCore.csproj" />
   </ItemGroup>
 
 </Project>
