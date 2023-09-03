@@ -25,7 +25,7 @@ public class TestController : ControllerBase
     {
         var temp = await _context.Users.FirstOrDefaultAsync();
         var endpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri(QueueHelper.GetQueueName(Constants.QueueNames.EmailService)));
-        await endpoint.Send(new SendEmailRequest("khongduy1722001@gmail.com", "Test", "Test"));
+        _ = endpoint.Send(new SendEmailRequest("khuongduy1722001@gmail.com", "Test", "Test"));
         return Ok(temp);
     }
 }

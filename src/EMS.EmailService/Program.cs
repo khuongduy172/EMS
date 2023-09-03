@@ -1,4 +1,5 @@
 using EMS.EmailService;
+using EMS.EmailService.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddControllers();
 
     builder.Services.ConfigureMassTransit(builder.Configuration);
+
+    builder.Services.Configure<MailSettings>(builder.Configuration.GetSection(nameof(MailSettings)));
+    builder.Services.AddTransient<IMailService, MailService>();
 }
 
 var app = builder.Build();
