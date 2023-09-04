@@ -1,4 +1,4 @@
-namespace IMS.Data.Models.Common;
+namespace EMS.Data.Models.Common;
 
 public abstract class Auditable
 {

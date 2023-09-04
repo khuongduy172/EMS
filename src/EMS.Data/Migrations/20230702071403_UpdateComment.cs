@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace IMS.Data.Migrations
+namespace EMS.Data.Migrations
 {
     /// <inheritdoc />
     public partial class UpdateComment : Migration

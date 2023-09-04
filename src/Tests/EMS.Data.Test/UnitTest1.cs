@@ -1,4 +1,4 @@
-namespace IMS.Data.Test;
+namespace EMS.Data.Test;
 
 public class Tests
 {

@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IMS.Data\EMS.Data.csproj" />
+    <ProjectReference Include="..\EMS.Data\EMS.Data.csproj" />
     <ProjectReference Include="..\MessagingCore\MessagingCore.csproj" />
   </ItemGroup>
 

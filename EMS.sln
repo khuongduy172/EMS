@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{103D2965-6EA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "src\WebAPI\WebAPI.csproj", "{247B81A0-4C08-4ED9-84B3-39633CFE1E44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.Data", "src\IMS.Data\EMS.Data.csproj", "{85EFFDFC-552E-433F-ADC6-4B019E51EF8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.Data", "src\EMS.Data\EMS.Data.csproj", "{85EFFDFC-552E-433F-ADC6-4B019E51EF8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEAE25F6-E425-4F8B-89D6-237126393C59}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E98DED1-ABE6-484F-9857-8D4B471886AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS.Data.Test", "src\Tests\IMS.Data.Test\IMS.Data.Test.csproj", "{7B2BC98A-9CFB-49F0-8740-3C4BCED8C794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.Data.Test", "src\Tests\EMS.Data.Test\EMS.Data.Test.csproj", "{7B2BC98A-9CFB-49F0-8740-3C4BCED8C794}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessagingCore", "src\MessagingCore\MessagingCore.csproj", "{0CFFE160-C568-4F51-9A1B-7218E8E8565E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.EmailService", "src\EMS.EmailService\EMS.EmailService.csproj", "{42C2E48C-DC6A-49A8-9E88-542DBC9D6C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.EmailService", "src\EMS.EmailService\EMS.EmailService.csproj", "{42C2E48C-DC6A-49A8-9E88-542DBC9D6C93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

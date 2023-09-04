@@ -1,4 +1,4 @@
-﻿namespace IMS.Data.Enums;
+﻿namespace EMS.Data.Enums;
 
 public enum TypeNotiEnum
 {

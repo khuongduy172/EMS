@@ -1,28 +1,14 @@
-﻿using IMS.Data.Models.Common;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
 using social_network.src.Models;
 using System.Reflection;
+using EMS.Data.Models.Common;
 
-namespace IMS.Data.Context;
+namespace EMS.Data.Context;
 
 public class ApplicationDbContext : DbContext
 {
     public DbSet<User> Users { get; set; }
-    public DbSet<Status> Statuses { get; set; }
-    public DbSet<Comment> Comments { get; set; }
-    public DbSet<React> Reacts { get; set; }
-    public DbSet<Follow> Follows { get; set; }
-    public DbSet<Message> Messages { get; set; }
-    public DbSet<StatusImage> StatusImages { get; set; }
-    public DbSet<Notification> Notifications { get; set; }
-    public DbSet<Story> Stories { get; set; }
-    public DbSet<UserViewStory> UserViewStories { get; set; }
-    public DbSet<Reel> Reels { get; set; }
-    public DbSet<UserViewReel> UserViewReels { get; set; }
-    public DbSet<UserViewStatus> UserViewStatuses { get; set; }
-    public DbSet<ReelReact> ReelReacts { get; set; }
-    public DbSet<ReelComment> ReelComments { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {

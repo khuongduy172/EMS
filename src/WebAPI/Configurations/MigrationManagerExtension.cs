@@ -1,4 +1,4 @@
-﻿using IMS.Data.Context;
+﻿using EMS.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Configurations;

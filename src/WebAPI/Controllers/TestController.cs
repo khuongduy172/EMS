@@ -1,4 +1,4 @@
-﻿using IMS.Data.Context;
+﻿using EMS.Data.Context;
 using MassTransit;
 using MessagingCore;
 using MessagingCore.Email;

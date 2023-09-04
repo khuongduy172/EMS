@@ -17,11 +17,11 @@ dotnet new <TEMPLATE>
 ## Add project to solution
 
 ```
-dotnet sln add .\src\IMS.Data\IMS.Data.csproj
+dotnet sln add .\src\EMS.Data\EMS.Data.csproj
 ```
 
 ## Add a new migration to specific project
 
 ```
-dotnet ef migrations add InitialMigration --project .\src\IMS.Data\ --startup-project .\src\WebAPI\ 
+dotnet ef migrations add InitialMigration --project .\src\EMS.Data\ --startup-project .\src\WebAPI\ 
 ```

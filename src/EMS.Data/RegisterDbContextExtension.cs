@@ -1,9 +1,9 @@
-﻿using IMS.Data.Context;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using EMS.Data.Context;
 
-namespace IMS.Data;
+namespace EMS.Data;
 
 public static class RegisterDbContextExtension
 {
