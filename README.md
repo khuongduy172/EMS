@@ -25,3 +25,6 @@ dotnet sln add .\src\EMS.Data\EMS.Data.csproj
 ```
 dotnet ef migrations add InitialMigration --project .\src\EMS.Data\ --startup-project .\src\WebAPI\ 
 ```
+
+WebAPI - 5000
+EmailService - 5001
