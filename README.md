@@ -23,5 +23,11 @@ dotnet sln add .\src\EMS.Data\EMS.Data.csproj
 ## Add a new migration to specific project
 
 ```
-dotnet ef migrations add InitialMigration --project .\src\EMS.Data\ --startup-project .\src\WebAPI\ 
+dotnet ef migrations add InitialMigration --project .\src\EMS.Data\ --startup-project .\src\WebAPI\
 ```
+
+## Services's Port in system
+| Service           | Port HTTP |   Port HTTPS  |
+| :---------------- | :------:  | ------------: |
+| WebAPI            |   5000    |   5001        |
+| EMS.EmailService  |   5002    |   5003        |
