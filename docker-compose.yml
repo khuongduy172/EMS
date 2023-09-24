@@ -1,0 +1,65 @@
+version: '3'
+
+services:
+  email-service:
+    build:
+      context: ./
+      dockerfile: Dockerfile.EmailService
+    container_name: email-service
+    environment:
+      - 'ConnectionStrings__DefaultConnection=server=host.docker.internal;Port=5432;Database=ems;User Id=postgres;Password=dev;'
+      - 'ConnectionStrings__RabbitMQ=rabbitmq'
+      - "MailSettings__DisplayName=John Wick's Support"
+      - 'MailSettings__From=nguyenngockhuongduy172@gmail.com'
+      - 'MailSettings__Host=smtp.gmail.com'
+      - 'MailSettings__Port=587'
+      - 'MailSettings__Password=mmdonfayrzxazaqu'
+      - 'MailSettings__UserName=nguyenngockhuongduy172@gmail.com'
+      - 'MailSettings__UseSSL=false'
+      - 'MailSettings__UseStartTls=true'
+    networks:
+      - node-network
+  webapi:
+    build:
+      context: ./
+      dockerfile: Dockerfile.WebAPI
+    container_name: webapi
+    ports:
+      - 5000:5000
+    environment:
+      - 'ASPNETCORE_ENVIRONMENT=Development'
+      - 'ConnectionStrings__DefaultConnection=server=host.docker.internal;Port=5432;Database=ems;User Id=postgres;Password=dev;'
+      - 'ConnectionStrings__RabbitMQ=rabbitmq'
+    networks:
+      - node-network
+  rabbitmq:
+    container_name: rabbitmq
+    image: masstransit/rabbitmq:latest
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    healthcheck:
+      # "test: rabbitmq-diagnostics check_port_connectivity" does not work with masstransit/rabbitmq
+      test: ['CMD', 'rabbitmqctl', 'status']
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    networks:
+      - node-network
+  # nginx:
+  #   image: nginx:latest
+  #   container_name: social-nginx
+  #   restart: on-failure
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   volumes:
+  #     - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  #   depends_on:
+  #     - api
+  #   networks:
+  #     - node-network
+
+networks:
+  node-network:
+    driver: bridge
