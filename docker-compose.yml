@@ -8,7 +8,7 @@ services:
     container_name: email-service
     environment:
       - 'ConnectionStrings__DefaultConnection=server=host.docker.internal;Port=5432;Database=ems;User Id=postgres;Password=dev;'
-      - 'ConnectionStrings__RabbitMQ=amqp://admin:admin@localhost:5672/'
+      - 'ConnectionStrings__RabbitMQ=rabbitmq'
       - "MailSettings__DisplayName=John Wick's Support"
       - 'MailSettings__From=nguyenngockhuongduy172@gmail.com'
       - 'MailSettings__Host=smtp.gmail.com'
@@ -29,7 +29,21 @@ services:
     environment:
       - 'ASPNETCORE_ENVIRONMENT=Development'
       - 'ConnectionStrings__DefaultConnection=server=host.docker.internal;Port=5432;Database=ems;User Id=postgres;Password=dev;'
-      - 'ConnectionStrings__RabbitMQ=amqp://admin:admin@localhost:5672/'
+      - 'ConnectionStrings__RabbitMQ=rabbitmq'
+    networks:
+      - node-network
+  rabbitmq:
+    container_name: rabbitmq
+    image: masstransit/rabbitmq:latest
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    healthcheck:
+      # "test: rabbitmq-diagnostics check_port_connectivity" does not work with masstransit/rabbitmq
+      test: ['CMD', 'rabbitmqctl', 'status']
+      interval: 5s
+      timeout: 10s
+      retries: 10
     networks:
       - node-network
   # nginx:
